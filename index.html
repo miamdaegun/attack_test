@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced XSS Test for Press This</title>
+    
+    <meta name="description" content='Quote test" onmouseover="alert(1)'>
+    
+    <meta property="og:description" content="&lt;img src=x onerror=alert(1)&gt;">
+    
+    <meta property="og:video" content="javascript:alert(1)//http://youtube.com/v/123">
+
+    <meta property="og:image" content="http://attacker.com/image.jpg?a=&quot;onload=&quot;alert(1)">
+
+</head>
+<body>
+    <h1>Pprreesss This Sanitization Probe</h1>
+    <p>Use the bookmarklet on this page.</p>
+    
+    <img src="http://placehold.it/300x300" data-custom="' onmouseover='alert(1)">
+</body>
+</html>
